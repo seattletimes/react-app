@@ -32,7 +32,7 @@ class ListAll extends Component {
   };
 
   render() {
-    return (
+    return (  
       <Flipper flipKey={this.state.data.join("www")}>
         <button onClick={this.allItems}> All organisms</button>
         <button onClick={() => this.expectedItems()}>Expected organisms</button>
@@ -41,7 +41,7 @@ class ListAll extends Component {
           {this.state.data.map(d => (
             <Flipped key={d} flipId={d}>
               <li>
-                <img src= {d} />
+                <img class= "constrained" src= {d} />
               </li>
             </Flipped>
           ))}
