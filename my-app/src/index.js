@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Flipper, Flipped } from "react-flip-toolkit";
 import styles from "./styles.css";
+// import styles from "./css/seed.less";
 
 import photoCaprellids from "./photos/Caprellids.jpg";
 import photoChinook from "./photos/Chinook.jpg";
@@ -41,7 +42,7 @@ class ListAll extends Component {
           {this.state.data.map(d => (
             <Flipped key={d} flipId={d}>
               <li>
-                <img class= "constrained" src= {d} />
+                <img className= "image" src= {d} />
               </li>
             </Flipped>
           ))}

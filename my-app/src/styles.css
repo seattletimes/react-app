@@ -1,5 +1,9 @@
 * {
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -7,9 +11,25 @@ body {
   align-items: left;
   max-width: 1400px;
   min-height: 100vh;
-  font-size: 2rem;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Helvetica Neue", Arial, sans-serif;
+  color: @df-off-black;
+  font-family: @df-serif;
+  font-size: @df-text-base;
+  line-height: @df-line-base;
+  padding: 0;
+  margin: 0;
+  touch-action: manipulation;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 30 / 28;
+  letter-spacing: -0.5px;
+
+  @media @tablet {
+    font-size: 42px;
+    line-height: 46 / 42;
+    letter-spacing: -1px;
+  }
 }
 
 .square {
@@ -37,7 +57,7 @@ body {
   justify-content: space-around;
 }
 
-.constrained {
+.image {
   flex-grow: 3;
   max-width: 430px;
   max-height: 400px;
@@ -45,8 +65,9 @@ body {
   border-color: rgb(192, 192, 192);
   justify-content: space-around;
 
-  @media @mobile {
-    
+  @media (max-width: 480px) {
+    max-width: 200px;
   }
-
 }
+
+
