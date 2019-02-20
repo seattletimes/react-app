@@ -14,6 +14,9 @@ import photoSquid from "./photos/Squid.jpg";
 import photoTunicat from "./photos/Tunicat.jpg";
 import photoWolf_Eel from "./photos/Wolf_Eel.jpg";
 
+
+
+
 class ListAll extends Component {
   state = { data: [photoCaprellids, photoChinook, photoHerring, photoPompano, photoPryosomes, photoSeaNettle, photoSquid, photoTunicat, photoWolf_Eel] };
 	
@@ -34,7 +37,7 @@ class ListAll extends Component {
 
   render() {
     return (  
-      <Flipper flipKey={this.state.data.join("www")}>
+      <Flipper flipKey={this.state.data.fullScreen}>
         <button onClick={this.allItems}> All organisms</button>
         <button onClick={() => this.expectedItems()}>Expected organisms</button>
         <button onClick={() => this.unexpectedItems()}>Unexpected organisms</button>
@@ -53,40 +56,3 @@ class ListAll extends Component {
 }
 
 ReactDOM.render(<ListAll />, document.querySelector("#root"));
-
-
-// const Square = ({ toggleFullScreen }) => (
-//   <Flipped flipId="square">
-//     <div className="square" onClick={toggleFullScreen} />
-//   </Flipped>
-// );
-
-// const FullScreenSquare = ({ toggleFullScreen }) => (
-//   <Flipped flipId="square">
-//     <div className="full-screen-square" onClick={toggleFullScreen} />
-//   </Flipped>
-// );
-
-// class AnimatedSquare extends Component {
-//   state = { fullScreen: false };
-
-//   toggleFullScreen = () => {
-//     this.setState(prevState => ({
-//       fullScreen: !prevState.fullScreen
-//     }));
-//   };
-
-//   render() {
-//     return (
-//       <Flipper flipKey={this.state.fullScreen}>
-//         {this.state.fullScreen ? (
-//           <FullScreenSquare toggleFullScreen={this.toggleFullScreen} />
-//         ) : (
-//           <Square toggleFullScreen={this.toggleFullScreen} />
-//         )}
-//       </Flipper>
-//     );
-//   }
-// }
-
-// ReactDOM.render(<AnimatedSquare />, document.querySelector("#root"));
