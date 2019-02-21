@@ -26,6 +26,16 @@ h1 {
   letter-spacing: -0.5px;
 }
 
+.source {
+  margin: 6px auto 0;
+  max-width: 960px;
+  line-height: 1.2;
+  font-size: 14px;
+  font-style: italic;
+  font-family: Helvetica Neue;
+  color: @df-middle-gray;
+}
+
 .full-screen-square {
   position: fixed;
   left: 0;

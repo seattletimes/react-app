@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { Flipper, Flipped } from "react-flip-toolkit";
 import styles from "./styles.css";
-// import styles from "./css/seed.less";
 
 import photoCaprellids from "./photos/Caprellids.jpg";
 import photoChinook from "./photos/Chinook.jpg";
@@ -135,12 +134,12 @@ class ListAll extends Component {
   };
 
   expectedItems = () => {
-    var filter = [chinook, caprellids, seaNettle, wolf_Eel, tunicat, herring];
+    var filter = [chinook, caprellids, seaNettle, wolf_Eel, squid, tunicat, herring];
     this.setState({ data: filter });
   };
 
   unexpectedItems = () => {
-    var filter = [pryosomes, pompano, squid];
+    var filter = [pryosomes, pompano];
     this.setState({ data: filter });
   };
 
@@ -148,9 +147,9 @@ class ListAll extends Component {
     return (  
       <Flipper flipKey={this.state.data.image}>
       <div className="groupButton">
-        <button onClick={this.allItems}> All organisms</button>
-        <button onClick={() => this.expectedItems()}>Expected organisms</button>
-        <button onClick={() => this.unexpectedItems()}>Unexpected organisms</button>
+        <button onClick={this.allItems}> Sample of species</button>
+        <button onClick={() => this.expectedItems()}>Expected species</button>
+        <button onClick={() => this.unexpectedItems()}>Unexpected species</button>
       </div>
         <ul className="list">
           {this.state.data.map(d => (
