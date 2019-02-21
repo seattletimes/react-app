@@ -162,3 +162,18 @@ button {
   display: flex;
   justify-content: center;
 }
+
+@media only screen and (max-width: 480px) {
+  .groupButton {
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+    width: 21em;
+  }
+
+  .button {
+    margin: 0;
+    font-size: 12px;
+    padding: 0;
+  }
+}
