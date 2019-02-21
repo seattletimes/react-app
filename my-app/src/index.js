@@ -21,11 +21,13 @@ const Fish = ({ toggleFullScreen, image }) => (
 
 const FullScreenFish = ({ toggleFullScreen, image, text, name, scienceName, info }) => (
   <div className="full-screen-square image">
+    <h6>X | Close</h6>
     <img src={image} onClick={toggleFullScreen} />
     <h2>{name}</h2>
     <h3>{scienceName}</h3>
     <h4>{info}</h4>
     <h5>{text}</h5>
+
   </div>
 );
 

@@ -56,7 +56,6 @@ padding-top: 10px;
   margin: 0 50px;
   font-family: Helvetica Neue;
   text-transform: uppercase;
-  overflow: scroll;
 }
 
 .full-screen-square h3 {
@@ -67,7 +66,6 @@ padding-top: 10px;
   margin-left: 50px;
   font-family: Helvetica Neue;
   font-style: italic;
-  overflow: scroll;
 }
 
 .full-screen-square h4 {
@@ -79,7 +77,6 @@ padding-top: 10px;
   margin-left: 50px;
   font-family: Helvetica Neue;
   font-style: normal;
-  overflow: scroll;
 }
 
 .full-screen-square h5 {
@@ -89,8 +86,18 @@ padding-top: 10px;
   text-align: left;
   margin: 0 50px;
   font-family: Helvetica Neue;
-  overflow: scroll;
   padding-bottom: 50px;
+}
+
+.full-screen-square h6 {
+  position: relative;
+  font-size: 12px;
+  color: rgb(126, 131, 139);
+  text-align: right;
+  top: 11%;
+  margin-right: 6%; 
+  font-family: Helvetica Neue;
+  pointer-events: none;
 }
 
 .full-screen-square img {
