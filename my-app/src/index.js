@@ -15,7 +15,7 @@ import photoWolf_Eel from "./photos/Wolf_Eel.jpg";
 
 const Fish = ({ toggleFullScreen, image, name }) => (
   <div>
-    <img className="square image" src={image} onClick={toggleFullScreen} />
+    <img className="square image2" src={image} onClick={toggleFullScreen} />
     <p>{name}</p>
   </div>
 );

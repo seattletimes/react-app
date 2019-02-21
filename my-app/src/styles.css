@@ -60,6 +60,7 @@ p {
   height: 100%;
   padding-top: 20px;
   overflow: auto;
+  border: none;
 }
 
 .full-screen-square h2 {
@@ -126,6 +127,11 @@ padding-top: 10px;
   max-width: 900px;
   border: 1px solid rgb(126, 131, 139);
 }
+
+.full-screen-square image {
+  border: 0px solid rgb(126, 131, 139);
+}
+
 .square {
   max-width: 300px;
   cursor: pointer;
@@ -146,13 +152,20 @@ padding-top: 10px;
   padding-inline-start: 0px;
 }
 
-.image {
+.image2 {
   top: 0px;
   left: 0;
   width: 100%;
   justify-content: space-around;
   /* margin-bottom: 5px; */
   border: 1px solid rgb(126, 131, 139);
+}
+
+.image {
+  top: 0px;
+  left: 0;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .img {
