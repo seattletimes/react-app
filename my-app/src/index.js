@@ -13,9 +13,10 @@ import photoSquid from "./photos/Squid.jpg";
 import photoTunicat from "./photos/Tunicat.jpg";
 import photoWolf_Eel from "./photos/Wolf_Eel.jpg";
 
-const Fish = ({ toggleFullScreen, image }) => (
+const Fish = ({ toggleFullScreen, image, name }) => (
   <div>
     <img className="square image" src={image} onClick={toggleFullScreen} />
+    <p>{name}</p>
   </div>
 );
 
@@ -47,7 +48,7 @@ class AnimatedFish extends Component {
                 {this.state.fullScreen ? (
           <FullScreenFish toggleFullScreen={this.toggleFullScreen} image={this.props.image} text={this.props.text} name={this.props.name} scienceName={this.props.scienceName} info={this.props.info} />
         ) : (
-          <Fish toggleFullScreen={this.toggleFullScreen} image={this.props.image} />
+          <Fish toggleFullScreen={this.toggleFullScreen} image={this.props.image} name={this.props.name} />
         )}
             </li>
         </Flipped>
@@ -148,11 +149,11 @@ class ListAll extends Component {
   render() {
     return (  
       <Flipper flipKey={this.state.data.image}>
-      <div className="groupButton">
+      {/* <div className="groupButton">
         <button onClick={this.allItems}> Sample of species</button>
         <button onClick={() => this.expectedItems()}>Expected species</button>
         <button onClick={() => this.unexpectedItems()}>Unexpected species</button>
-      </div>
+      </div> */}
         <ul className="list">
           {this.state.data.map(d => (
             <AnimatedFish key={d} flipId={d} image={d.image} text={d.text} name={d.name} scienceName={d.scienceName} info={d.info} />
