@@ -25,10 +25,12 @@ h1 {
   line-height: 30 / 28;
   letter-spacing: -0.5px;
   text-align: center;
+  padding-right: 20px;
 }
 
-p1 {
+h2 {
   font-size: 20px;
+  padding-right: 20px;
 }
 
 p {
